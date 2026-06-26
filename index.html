@@ -1,234 +1,227 @@
-<!doctype html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>「見えにくい症状」と向き合う日々 — 重症筋無力症の患者さんの声</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="scripts.js"></script>
-</head>
-<body>
-  <!-- Menu Bar -->
-  <nav class="menu-bar">
-    <div class="menu-bar__wrap">
-      <a href="index.html" class="menu-bar__logo">
-        <img src="seedplanning_logo.png" alt="SEED PLANNING" />
-      </a>
-      <button class="menu-bar__toggle" type="button" aria-label="メニュー" onclick="toggleMenu()">☰</button>
-      <div class="menu-bar__nav" id="menuNav">
-        <a href="index.html" class="is-active">HOME</a>
-        <a href="diagnosis.html">診断までの道のり</a>
-        <a href="daily.html">日常生活での困難</a>
-        <a href="medical.html">医療との関わり方</a>
-        <a href="message.html">伝えたいメッセージ</a>
-        <a href="resources.html">このサイトについて</a>
-      </div>
-    </div>
-  </nav>
+body {
+  letter-spacing: 0.01em;
+}
 
-  <main>
-    <!-- Hero + Intro Combined -->
-    <section class="intro">
-      <div class="intro__decorative-text intro__decorative-text--top-left">SEED PLANNING</div>
-      <div class="intro__decorative-text intro__decorative-text--top-right">MYASTHENIA GRAVIS</div>
-      <div class="intro__decorative-text intro__decorative-text--bottom-right">INITIATIVES</div>
-      <div class="intro__decorative-text intro__decorative-text--bottom-left">RARE DISEASE</div>
-      
-      <div class="intro__container">
-        <div class="intro__content-group">
-          <div class="intro__header">
-            <h1 class="intro__title">「見えにくい症状」<br>と向き合う日々</h1>
-            <div class="intro__subtitle-box">
-              <p class="intro__subtitle">重症筋無力症の患者さんの声</p>
-            </div>
-          </div>
-          
-          <div class="intro__body">
-            <p class="intro__text">
-              重症筋無力症は、外見からは分かりにくい症状が多く、診断にたどり着くまでに時間がかかることの<br>ある指定難病です。また、時間帯や体調によって症状の現れ方が変化しやすく、周囲から<br>理解されにくい場面も少なくありません。こうした「見えにくさ」は、日常生活だけでなく、<br>精神的な負担につながることもあります。
-            </p>
-            <p class="intro__text">
-              今回、7名の重症筋無力症患者さんにお話を伺い、診断に至るまでの経験や日常生活での困難、<br>医療との関わり方、そして経験を<span class="intro__text-tight">通して見えてきたことについてまとめました。</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+.menu-bar__nav a {
+  letter-spacing: 0.03em;
+  padding: 10px 12px;
+}
 
-    <!-- Topic picker (HOME) -->
-    <section class="topic-picker">
-      <div class="wrap">
-        <div class="topic-picker__grid">
-          <!-- Left list -->
-          <nav class="topic-list" aria-label="テーマ">
-            <button class="topic-list__item is-active" type="button" data-topic-button="diagnosis">診断までの道のり</button>
-            <button class="topic-list__item" type="button" data-topic-button="daily">日常生活での困難</button>
-            <button class="topic-list__item" type="button" data-topic-button="medical">医療との関わり方</button>
-            <button class="topic-list__item" type="button" data-topic-button="message">伝えたいメッセージ</button>
-          </nav>
+.page-header__title {
+  font-size: 30px;
+  letter-spacing: 0.06em;
+  line-height: 1.35;
+}
 
-          <!-- Right detail (4 panels; text is editable in HTML) -->
-          <div>
-            <!-- Diagnosis -->
-            <article class="topic-detail" data-topic-panel="diagnosis">
-              <div class="topic-detail__header">
-                <div class="topic-detail__header-left">
-                  <h3 class="topic-detail__title">診断までの道のり</h3>
-                  <p class="topic-detail__kicker">気づきにくい症状から<br>診断に至るまでの経験</p>
-                </div>
-                <img class="topic-detail__icon" src="yellow_icon.png" alt="" aria-hidden="true" />
-              </div>
-              <div class="rule" aria-hidden="true"></div>
-              <p class="topic-detail__body">
-                重症筋無力症は、初期症状が分かりにくく、診断にたどり着くまでに時間がかかることがあります。<br>ここでは、患者さんが感じた違和感や、診断までの迷いや戸惑いについてまとめています。
-              </p>
-              <div class="topic-detail__content">
-                <ul class="topic-detail__bullets">
-                  <li>ただの疲れだと思っていた</li>
-                  <li>複数の診療科を回っても診断がつかなかった</li>
-                  <li>抗体が出ず、心因性を疑われた</li>
-                  <li>検索結果で「指定難病」と知り不安が強まった</li>
-                </ul>
-                <div class="topic-detail__button">
-                  <a class="pill-link" href="diagnosis.html">このテーマを見る</a>
-                </div>
-              </div>
-            </article>
+.page-header__subtitle {
+  letter-spacing: 0.02em;
+}
 
-            <!-- Daily -->
-            <article class="topic-detail" data-topic-panel="daily" hidden>
-              <div class="topic-detail__header">
-                <div class="topic-detail__header-left">
-                  <h3 class="topic-detail__title">日常生活での困難</h3>
-                  <p class="topic-detail__kicker">日々の体調の波と、<br>工夫しながら暮らすこと</p>
-                </div>
-                <img class="topic-detail__icon" src="red_icon.png" alt="" aria-hidden="true" />
-              </div>
-              <div class="rule" aria-hidden="true"></div>
-              <p class="topic-detail__body topic-detail__body--daily">
-                「見えにくい」症状だからこそ、周囲に伝わりにくい困りごとが生まれることがあります。<br>ここでは、体調の波、日常での工夫、心の負担など、暮らしのリアルをまとめています。
-              </p>
-              <div class="topic-detail__content">
-                <ul class="topic-detail__bullets">
-                  <li>夕方に症状が強くなる／日によって差が大きい</li>
-                  <li>歩行や階段、細かい作業の負担が増えた</li>
-                  <li>無理をしない選択をする難しさ</li>
-                  <li>理解されにくさが心の負担になる</li>
-                </ul>
-                <div class="topic-detail__button">
-                  <a class="pill-link" href="daily.html">このテーマを見る</a>
-                </div>
-              </div>
-            </article>
+.intro__title {
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+}
 
-            <!-- Medical -->
-            <article class="topic-detail" data-topic-panel="medical" hidden>
-              <div class="topic-detail__header">
-                <div class="topic-detail__header-left">
-                  <h3 class="topic-detail__title">医療との関わり方</h3>
-                  <p class="topic-detail__kicker">治療の選択と、<br>医療者との関係のなかで</p>
-                </div>
-                <img class="topic-detail__icon" src="plum_icon.png" alt="" aria-hidden="true" />
-              </div>
-              <div class="rule" aria-hidden="true"></div>
-              <p class="topic-detail__body">
-                治療は一つではなく、生活や価値観に合わせた選択が必要になることがあります。<br>ここでは、治療方針の選択や、医療者との関係性についての声をまとめています。
-              </p>
-              <div class="topic-detail__content">
-                <ul class="topic-detail__bullets">
-                  <li>効果・副作用・費用・生活への影響を踏まえた選択</li>
-                  <li>説明や対話の積み重ねが安心につながる</li>
-                  <li>不安が強い時期の情報整理</li>
-                  <li>主治医・看護師との関わり方</li>
-                </ul>
-                <div class="topic-detail__button">
-                  <a class="pill-link" href="medical.html">このテーマを見る</a>
-                </div>
-              </div>
-            </article>
+.intro__subtitle {
+  letter-spacing: 0.06em;
+}
 
-            <!-- Message -->
-            <article class="topic-detail" data-topic-panel="message" hidden>
-              <div class="topic-detail__header">
-                <div class="topic-detail__header-left">
-                  <h3 class="topic-detail__title">伝えたいメッセージ</h3>
-                  <p class="topic-detail__kicker">つながりが支えになること、そして知ってほしいこと</p>
-                </div>
-                <img class="topic-detail__icon" src="green_icon.png" alt="" aria-hidden="true" />
-              </div>
-              <div class="rule" aria-hidden="true"></div>
-              <p class="topic-detail__body">
-                同じ病気の人との出会いや、安心して相談できる場は、気持ちを支える力になります。<br>ここでは、患者さんが「伝えたい」思いをまとめています。
-              </p>
-              <div class="topic-detail__content">
-                <ul class="topic-detail__bullets">
-                  <li style="letter-spacing: -0.02em;">SNSやコミュニティで「一人じゃない」と感じられた</li>
-                  <li>医療機関・相談先との相性が大切</li>
-                  <li>支援制度や公的情報を知っておくこと</li>
-                  <li style="letter-spacing: -0.04em;">無理をしない、頼れる場所をつくる</li>
-                </ul>
-                <div class="topic-detail__button">
-                  <a class="pill-link" href="message.html">このテーマを見る</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+.topic-list {
+  gap: 44px;
+  flex-wrap: wrap;
+}
 
-  <!-- Contact + Footer (全ページ共通として実装) -->
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <div class="contact__grid">
-        <div>
-          <h2 class="contact__title">お問い合わせ</h2>
-          <p class="contact__company">株式会社シード・プランニング</p>
+.topic-list__item {
+  letter-spacing: 0.03em;
+}
 
-          <div class="contact__line">
-            <img src="icon_mail.png?v=4" alt="" aria-hidden="true" class="contact__icon" />
-            <a href="mailto:partners@seedplanning.co.jp">partners@seedplanning.co.jp</a>
-          </div>
-          <div class="contact__line">
-            <img src="icon_phone.png?v=4" alt="" aria-hidden="true" class="contact__icon" />
-            <span>080-4426-5204</span>
-          </div>
-          <div class="contact__line">
-            <img src="icon_location.png?v=4" alt="" aria-hidden="true" class="contact__icon" />
-            <span>〒113-0034 東京都文京区湯島3-19-11 湯島ファーストビル 4F</span>
-          </div>
+.topic-detail__title,
+.topic-row__title,
+.voice-header__title,
+.section-nav__text,
+.resource-hero__title,
+.closing-message__nav-text {
+  letter-spacing: 0.04em;
+}
 
-          <!-- SNSリンク -->
-          <div class="contact__icons" aria-label="SNS">
-            <a class="social social--x" href="https://x.com/seedplanning_m2" target="_blank" rel="noopener noreferrer" aria-label="X"></a>
-          </div>
-        </div>
+.topic-row__title {
+  line-height: 1.5;
+}
 
-      </div>
-    </div>
-  </section>
+.voice-card__name {
+  letter-spacing: 0.03em;
+}
 
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__brand">
-            <img src="seedplanning_logo.png" alt="SEED PLANNING" />
-          </div>
-          <div class="footer__copy">© Seed Planning Co., Ltd.</div>
-        </div>
-        
-        <nav class="footer__nav" aria-label="フッターナビ">
-          <a href="index.html">HOME</a>
-          <a href="diagnosis.html">診断までの道のり</a>
-          <a href="daily.html">日常生活での困難</a>
-          <a href="medical.html">医療との関わり方</a>
-          <a href="message.html">伝えたいメッセージ</a>
-          <a href="resources.html">このサイトについて</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+.section-nav__text {
+  font-size: 18px;
+}
+
+.footer__nav {
+  font-size: 12px;
+}
+
+.contact__note-text--compact {
+  letter-spacing: 0;
+}
+
+@media (max-width: 640px) {
+  .intro__title {
+    font-size: 30px;
+  }
+
+  .page-header__title {
+    font-size: 26px;
+  }
+
+  .topic-list {
+    gap: 18px;
+  }
+
+  .section-nav__text {
+    font-size: 16px;
+  }
+}
+
+
+/* English site refinements */
+.menu-bar__nav {
+  gap: 6px;
+  padding-right: 18px;
+}
+
+.menu-bar__nav a {
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  padding: 8px 8px;
+  white-space: nowrap;
+}
+
+.topic-image img {
+  width: 100%;
+}
+
+.about-site__line1 {
+  white-space: normal;
+  letter-spacing: 0.01em;
+  font-size: 15px;
+}
+
+.about-site__line {
+  letter-spacing: 0.01em;
+}
+
+.disclaimer__text {
+  max-width: 1120px;
+}
+
+.contact__line a {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1180px) {
+  .menu-bar__nav {
+    gap: 4px;
+    padding-right: 14px;
+  }
+
+  .menu-bar__nav a {
+    font-size: 11.5px;
+    padding: 8px 6px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .menu-bar__nav {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    background: #fff8ed;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    display: none;
+  }
+
+  .menu-bar__nav.is-open {
+    display: flex;
+  }
+
+  .menu-bar__nav a {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+    border-radius: 0;
+    font-size: 14px;
+  }
+
+  .menu-bar__toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro__subtitle {
+    white-space: normal;
+  }
+
+  .topic-list__item {
+    min-height: 62px;
+  }
+
+  .page-header__title {
+    letter-spacing: 0.02em !important;
+  }
+
+  .footer__nav a {
+    font-size: 12px !important;
+    padding: 4px 8px !important;
+  }
+}
+
+/* English voice-card overflow guard
+   Prevents a card from ending with a browser-generated ellipsis unless a Read more button is available.
+   By default, English voice text is shown in full. JavaScript marks only overflowing cards as collapsible. */
+.voice-card__text {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.voice-card__more {
+  display: inline;
+}
+
+.voice-card__ellipsis {
+  display: none;
+}
+
+.voice-card.is-collapsible:not(.is-expanded) .voice-card__text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 9;
+  overflow: hidden;
+}
+
+.voice-card.is-collapsible:not(.is-expanded) .voice-card__more {
+  display: none;
+}
+
+.voice-card.is-collapsible:not(.is-expanded) .voice-card__ellipsis {
+  display: inline;
+}
+
+.voice-card.is-collapsible.is-expanded .voice-card__text {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.voice-card.is-collapsible.is-expanded .voice-card__ellipsis {
+  display: none;
+}
+
+.voice-card__toggle[hidden] {
+  display: none !important;
+}
